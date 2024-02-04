@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import axios from "Axios";
+import axios from "axios";
 import { Context, server } from "../main";
 import toast from "react-hot-toast";
 import TodoItem from "../components/TodoItem";
@@ -23,21 +23,18 @@ function home() {
         }
       );
       toast.success(data.message);
-      setRefresh(prev=>!prev);
+      setRefresh((prev) => !prev);
     } catch (error) {
       toast.error(error.response.data.message);
     }
   };
-  const deleteHandeller = async(id) => {
+  const deleteHandeller = async (id) => {
     try {
-      const { data } = await axios.delete(
-        `${server}task/${id}`,
-        {
-          withCredentials: true,
-        }
-      );
+      const { data } = await axios.delete(`${server}task/${id}`, {
+        withCredentials: true,
+      });
       toast.success(data.message);
-      setRefresh(prev=>!prev);
+      setRefresh((prev) => !prev);
     } catch (error) {
       toast.error(error.response.data.message);
     }
@@ -65,7 +62,7 @@ function home() {
       setDescription("");
       toast.success(data.message);
       setIsLoading(false);
-      setRefresh(prev=>!prev);
+      setRefresh((prev) => !prev);
     } catch (error) {
       toast.error(error.response.data.message);
       setIsLoading(false);

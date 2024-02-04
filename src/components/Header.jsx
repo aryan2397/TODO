@@ -2,7 +2,7 @@ import React from "react";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { Context, server } from "../main";
-import axios from "Axios"
+import axios from "axios"
 import toast from "react-hot-toast";
 import Login from "../pages/Login";
 

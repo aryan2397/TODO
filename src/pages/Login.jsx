@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import { Link, Navigate } from "react-router-dom";
 import { Context, server } from "../main";
 import toast from "react-hot-toast";
-import axios from "Axios";
+import axios from "axios";
 
 function Login() {
   const { isAuthenticated, setIsAuthenticated, loading, setIsLoading } = useContext(Context);
